@@ -32,17 +32,17 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-gradient-to-r from-blue-800 via-purple-700 to-pink-600 text-white flex flex-col items-center py-10 px-6">
-      <h1 className="text-5xl font-extrabold text-yellow-300 tracking-wider mb-8 shadow-lg">
+      <h1 className="text-5xl font-extrabold text-yellow-200 tracking-wider mb-8 shadow-md">
         Weather App
       </h1>
 
-      <form onSubmit={getWeather} className="w-full max-w-md bg-gradient-to-r from-purple-600 to-blue-600 rounded-xl p-6 shadow-lg">
+      <form onSubmit={getWeather} className="w-full max-w-md bg-gradient-to-r from-purple-700 to-blue-700 rounded-xl p-6 shadow-lg">
         <div className="relative mb-4">
           <input
             ref={getValue}
             type="text"
             placeholder="Enter City Name"
-            className="w-full py-4 px-5 rounded-lg bg-gray-800 text-yellow-200 placeholder-gray-400 focus:ring-2 focus:ring-yellow-400 focus:outline-none shadow-md"
+            className="w-full py-4 px-5 rounded-lg bg-gray-900 text-white placeholder-gray-300 focus:ring-2 focus:ring-yellow-300 focus:outline-none shadow-md"
           />
         </div>
         <div className="text-center">
