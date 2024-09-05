@@ -33,7 +33,7 @@ export default function App() {
   return (
     <div className="min-h-screen bg-gradient-to-r from-blue-900 via-purple-900 to-black text-white flex flex-col items-center py-10 px-6">
       <h1 className="text-5xl font-extrabold text-yellow-400 tracking-widest mb-8 shadow-yellow">
-        Weather Forecast
+        Weather App
       </h1>
 
       <form onSubmit={getWeather} className="w-full max-w-md">
