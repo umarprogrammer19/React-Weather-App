@@ -31,30 +31,30 @@ export default function App() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-r from-blue-900 via-purple-900 to-black text-white flex flex-col items-center py-10 px-6">
-      <h1 className="text-5xl font-extrabold text-yellow-400 tracking-widest mb-8 shadow-yellow">
+    <div className="min-h-screen bg-gradient-to-r from-blue-800 via-purple-700 to-pink-600 text-white flex flex-col items-center py-10 px-6">
+      <h1 className="text-5xl font-extrabold text-yellow-300 tracking-wider mb-8 shadow-lg">
         Weather App
       </h1>
 
-      <form onSubmit={getWeather} className="w-full max-w-md">
+      <form onSubmit={getWeather} className="w-full max-w-md bg-gradient-to-r from-purple-600 to-blue-600 rounded-xl p-6 shadow-lg">
         <div className="relative mb-4">
           <input
             ref={getValue}
             type="text"
             placeholder="Enter City Name"
-            className="w-full py-4 px-5 rounded-lg bg-gray-800 text-yellow-400 font-mono placeholder-gray-500 focus:ring-2 focus:ring-yellow-500 focus:outline-none shadow-lg"
+            className="w-full py-4 px-5 rounded-lg bg-gray-800 text-yellow-200 placeholder-gray-400 focus:ring-2 focus:ring-yellow-400 focus:outline-none shadow-md"
           />
         </div>
         <div className="text-center">
           <button
             type="submit"
-            className="w-full bg-yellow-500 py-3 rounded-lg text-xl font-bold text-black hover:bg-yellow-400 transition duration-300 shadow-lg">
+            className="w-full bg-yellow-400 py-3 rounded-lg text-xl font-bold text-gray-900 hover:bg-yellow-300 transition duration-300 shadow-lg">
             {loading ? 'Loading...' : 'Check Weather'}
           </button>
         </div>
       </form>
 
-      <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full">
+      <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-6xl">
         {data.length > 0 ? data.map((item) => (
           <Card
             key={item.location.name}
@@ -65,7 +65,7 @@ export default function App() {
             weatherText={item.current.condition.text}
             country={item.location.country}
           />
-        )) : <h2 className="text-gray-500 text-lg font-mono">Start by searching for a city.</h2>}
+        )) : <h2 className="text-gray-300 text-lg font-mono">Start by searching for a city.</h2>}
       </div>
     </div>
   );
