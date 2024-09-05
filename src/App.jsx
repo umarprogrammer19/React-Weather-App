@@ -16,7 +16,7 @@ export default function App() {
       .then((res) => {
         const cityExists = data.some(item => item.location.name === res.data.location.name);
         if (!cityExists) {
-          setData([...data, res.data]);
+          setData([res.data, ...data]);
         } else {
           alert('City already exists.');
         }
@@ -24,7 +24,7 @@ export default function App() {
         setLoading(false);
       })
       .catch((err) => {
-        alert('No such city found');
+        alert('This City Is Not Exists In My Data Try Another');
         getValue.current.value = '';
         setLoading(false);
       });
